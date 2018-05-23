@@ -1,0 +1,24 @@
+.first {
+    padding-left: 15px;
+    border-left: 2px solid #FF851B;
+  }
+  .second {
+    padding-left: 15px;
+    border-left: 2px solid #5bc0de;
+  }
+  .validate {
+    margin-top: 10px;
+  }
+  h4 {
+    margin-bottom: 10px;
+  }
+  .invalid-form-error-message {
+    margin-top: 10px;
+    padding: 5px;
+  }
+  .invalid-form-error-message.filled {
+    border-left: 2px solid red;
+  }
+html.codepen body {
+  margin: 1em;
+}

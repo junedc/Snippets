@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Google Maps - Place Autocomplete Address Form</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <body onload="initialize()">
+  <form class="form-address" id="address">
+
+    <!-- Search Field -->
+    <div class="flex-container c-1column" id="locationField">
+      <label>Search for your address</label>
+      <input class="flex-item" id="autocomplete" placeholder="address, zip or city" onFocus="geolocate()" type="text"></input>
+    </div>
+
+    <!-- Street Address -->
+    <div class="flex-container">
+      <label>Street address</label>
+      <div class="flex-item c-2column"><input id="street_number" ></input></div>
+      <div class="flex-item c-2column"><input id="route" ></input></div>
+    </div>
+
+    <!-- City -->
+    <div class="flex-container">
+      <label>City</label>
+      <input class="flex-item c-1column" id="locality" ></input>
+    </div>
+
+    <!-- State & Zip -->
+    <div class="flex-container">
+      <div class="flex-item c-2column">
+        <label>State</label>
+        <input id="administrative_area_level_1" ></input>
+      </div>
+      <div class="flex-item c-2column">
+        <label>Zip code</label>
+        <input id="postal_code" ></input>
+      </div>
+    </div>
+
+    <!-- Country -->
+    <div class="flex-container">
+      <label>Country</label>
+      <input class="flex-item c-1column" id="country" ></input>
+    </div>
+
+  </form>
+</body>
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
