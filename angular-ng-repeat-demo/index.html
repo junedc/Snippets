@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Angular ng-repeat Demo</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="container" ng-app="myApp" ng-controller="demoCtrl">
+  <input ng-model="myFilter" placeholder="Filter">
+    <button ng-click="myFilter = null"/>Clear</button>
+    <table>
+     <thead>
+       <th ng-repeat="header in headers">{{header}}</th>
+    </thead>
+    <tbody>
+      <tr>
+         <td><input type="text" ng-model="myFilter.flight"/></td>
+         <td><input type="text" ng-model="myFilter.departure"/></td>
+         <td><input type="text" ng-model="myFilter.arrival"/></td>
+         <td><input type="text" ng-model="myFilter.stops"/></td>
+         <td><input type="text" ng-model="myFilter.price"/></td>
+      </tr>
+      <tr ng-repeat="flight in flights | filter:myFilter">
+        <td ng-model="myFilter.flight">
+          {{flight.flight}}
+        </td>
+        <td>
+          {{flight.departure}}
+        </td>
+        <td>
+          {{flight.arrival}}
+        </td>
+        <td>
+          {{flight.stops}}
+        </td>
+        <td>
+          $ {{flight.price}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+     <script src="../libraries/angular.min.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

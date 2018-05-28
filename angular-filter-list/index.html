@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Use of Filter for 2 fields</title>
+    <!-- Bootstrap 3 css -->
+    <link href="../libraries/bootstrap.min.css" rel="stylesheet">
+    <!-- Angular.js -->
+    <script src="../libraries/angular.min.js"></script>
+    <!-- Angular-xeditable -->
+    <link href="angular-xeditable/css/xeditable.css" rel="stylesheet">
+    <script src="angular-xeditable/js/xeditable.js"></script>
+    <!-- app.js -->
+    <script src="app.js"></script>
+  </head>
+  <body style="padding: 20px">
+    <h1 style="margin-bottom: 20px">Angular-xeditable Starter Template</h1>
+    <div ng-controller="Ctrl">
+      
+	  <a href="#" editable-select="user.status" e-ng-options="s.value as s.text for s in statuses | filter:{value: 1}">
+         {{ showStatus() }}
+      </a>
+	  
+	  <br>
+	  
+	  <a href="#" editable-select="user.status2" e-ng-options="s.value as s.text for s in statuses ">
+         {{ showStatus() }}
+      </a>
+	  
+	  <br>
+	  <a href="#" editable-select="user.status" e-ng-options="s.value as s.text for s in statuses | filter:{type: scopeType() , value : 4}">
+         {{ showStatus() }}
+      </a>
+	  
+	  
+	  
+    </div>
+  </body>
+</html>  

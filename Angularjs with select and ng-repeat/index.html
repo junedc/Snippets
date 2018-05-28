@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="angularJsSelect">
+
+  <head>
+ 
+	
+	
+	<link href="../libraries/bootstrap.min.css" rel="stylesheet">
+	
+	<script src="../libraries/bootstrap.min.js"></script>	
+ 
+    <script src="../libraries/angular.min.js"></script>
+	
+	
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <h1>AngularJS with select and ng-repeat!</h1>
+    <div ng-repeat="i in items">
+      <div class="panel panel-default">
+        <div class="panel-body">
+             <label>{{i.id}}</label>
+             <input ng-model="i.title"/>
+             <select ng-model="defaultSelectedVAT">
+              <option value="">--- Select an option ---</option>
+              <option ng-selected= "{{value.id == defaultSelectedVAT}}" ng-repeat="value in vatRates" 
+                      value="{{value.id}}">{{value.value}}     
+              </option>
+             </select>
+        </div>
+      </div>
+     
+      
+    </div>
+  </body>
+
+</html>

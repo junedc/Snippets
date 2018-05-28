@@ -1,0 +1,33 @@
+@import "compass/css3";
+
+* {
+  font-family: sans-serif;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  padding: 50px;
+}
+
+table {
+  width: 100%;
+}
+
+td, th {
+  padding: 1em;
+  text-align: center;
+}
+
+th {
+  background-color: whitesmoke;
+}
+
+input {
+  box-sizing: border-box;
+  font-size: 1.25em;
+  outline: 0;
+  margin-bottom: 30px;
+  padding: .5em;
+  width: 100%;
+}

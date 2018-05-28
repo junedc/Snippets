@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Change button attributes</title>
+    <!-- Bootstrap 3 css -->
+    <link href="../libraries/bootstrap.min.css" rel="stylesheet">
+    <!-- Angular.js -->
+    <script src="../libraries/angular.min.js"></script>
+    <!-- Angular-xeditable -->
+    <link href="angular-xeditable/css/xeditable.css" rel="stylesheet">
+    <script src="angular-xeditable/js/xeditable.js"></script>
+    <!-- app.js -->
+    <script src="app.js"></script>
+  </head>
+  <body style="padding: 20px">
+    <h1 style="margin-bottom: 20px">Angular Change button attributes</h1>
+    <div ng-controller="Ctrl">
+      
+	  <button type="button" id="btnXX"  class="btn btn-sm" data-color="info" ng-click="changeBackground($event)" >Change My Background</button>
+      
+    </div>
+  </body>
+</html>  
